@@ -99,7 +99,7 @@ $app->post('/orders/', function() use ( $app ) {
     $orderJson = $app->request()->getBody();
     $newOrder = json_decode($orderJson, true);
     if($newOrder) {
-        $order = OrderService::add($newOrder);
+        $order = OrderService::add2($newOrder);
         echo "Order {$orderJson} added";
     }
     else {

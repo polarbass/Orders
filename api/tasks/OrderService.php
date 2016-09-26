@@ -14,5 +14,13 @@ class OrderService {
         return $order;
     }
 
+    
+    public static function add2($newOrder) {
+        $db = ConnectionFactory::getDB();
+        $order = $db->inserttable->insert(
+            array('Name' => $newOrder['name']));
+        return $order;
+    }
+
 }
 ?>

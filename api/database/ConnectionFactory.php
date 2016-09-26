@@ -15,6 +15,7 @@ class ConnectionFactory {
         
         try {
             $connection = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+            $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo " connected ";
         }
         catch(Exception $e) {
