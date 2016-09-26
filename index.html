@@ -1,0 +1,47 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!--base href="http://localhost:1080/angular1/lab7/"></base-->
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">  
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body ng-app="todosApp">
+
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">Tâches à faire</h3>
+</div>
+    
+  <div class="container" ng-view>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js" />
+  <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.5/angular-route.js"></script>
+  
+  <!-- buildscript: app-full.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/OrdersCtrl.js"></script>
+  <script src="scripts/controllers/TodosCtrl.js"></script>
+  <script src="scripts/controllers/TodoDetailCtrl.js"></script>
+  <script src="scripts/services/OrdersService.js"></script>  
+  <script src="scripts/services/TodosService.js"></script>
+  <script src="scripts/services/AuthService.js"></script>  
+  <!-- buildscript: app-full.js -->
+
+</body>
+</html>

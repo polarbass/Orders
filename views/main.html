@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Liste des tâches [ <a href="" ng-click="todosCtrl.archive()">Archiver</a> ]
+    <span class="pull-right" ng-cloak>
+      Il reste {{todosCtrl.remaining()}} tâches sur {{todosCtrl.todos.length}}
+    </span>
+  </div>
+  <div class="panel-body" ng-cloak>
+
+    <ul class="list-unstyled">
+      <li ng-repeat="todo in todosCtrl.todos">
+        {{$index}}: <input type="checkbox" ng-model="todo.done" />
+        <a ng-href="#/todos/{{todo.id}}" ng-class="{done:todo.done}">
+          {{todo.description}}
+        </a>
+      </li>
+    </ul>
+
+    <form name="addTodoForm" ng-submit="todosCtrl.addTodo(addTodoForm)" ng-enabled="todosCtrl.formEnabled">
+      <input name="newTodoDescription" type="text" class="form-control input-md" ng-model="todosCtrl.todoDescription" placeholder="Que désirez-vous accomplir?">
+
+      <span class="pull-right">
+        <input type="submit" class="btn btn-primary" value="Ajouter"/>
+      </span>
+    </form>
+
+  </div>
+</div>
