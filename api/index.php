@@ -96,10 +96,11 @@ $app->post('/todos/', function() use ( $app ) {
 });
 
 $app->post('/orders/', function() use ( $app ) {
+    echo "entering";
     $orderJson = $app->request()->getBody();
     $newOrder = json_decode($orderJson, true);
     if($newOrder) {
-        $order = OrderService::add2($newOrder);
+        $order = OrderService::add($newOrder);
         echo "Order {$orderJson} added";
     }
     else {
