@@ -26,4 +26,6 @@ app.controller('OrdersCtrl', ['OrdersService', '$scope', function(OrdersService,
     // Expose les méthodes publiques
     vm.addOrder = addOrder;
 
+    //Test
+
 }]);
